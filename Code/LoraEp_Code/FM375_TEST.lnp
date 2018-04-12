@@ -1,0 +1,60 @@
+"START251.obj",
+"LoraEp.obj",
+"main.obj",
+"trap.obj" 
+TO "FM375_TEST"
+CLASSES
+(
+	  
+	  //define data
+	  DATA  (D:0000H-D:007FH),			//
+	  IDATA (I:0000H-I:00FFH),			//
+	   //HDATA (D:021000H-D:0217FFH),    	 //need to use this if bigger than 64K 
+	  EDATA (D:000000H-D:000FFFH),    	//4k  RAM
+	  XDATA (D:010000H-D:0103ffH),	 	//exreg PER
+
+
+	  //define code
+	  //ECODE   (FF0000H-FFBFFFH), 		//flash 48K
+	  CODE   (FF0000H-FF0FFFH),		//4k bootflash
+ 	  CODE   (FF1000H-FFDFFFH),		//52K App Flash
+	  CODE   (FFE000H-FFFFFFH)   	//512BYTE UOB
+
+	  //const
+	 // HCONST  (FFC000H-FFC1FFH),		//NVR1(512 BYTE)
+	 // HCONST  (FFC000H-FFC3FFH)		    //NVR2(512 BYTE)
+	  )
+
+/*SEGMENTS
+(
+
+	  //?PR?DELAY (FF0083H)				//ASSIGN BOOTLOAD'S ADDRESS FOR 3.75k
+	  ?PR?MAIN?main (FF0100H),
+	  ?PR?MAIN?delay (FF0200H),
+	  
+	  //?PR?blk1?mmu_test (FF2000H),
+	  //?PR?blk2?mmu_test (FF4000H),
+	  //?PR?blk3?mmu_test (FF6000H),
+	  //?PR?blk4?mmu_test (FF8000H),
+	  //?PR?blk5?mmu_test (FFA000H)
+)*/
+
+/*SEGMENTS
+(
+
+	//  ?PR?DELAY (800000H)				//ASSIGN BOOTLOAD'S ADDRESS FOR 3.75k
+	//?PR?xunhuan (FC1000H)	
+	?PR?U7816 (FF1200H)
+
+)*/
+
+SEGMENTS
+(
+	?STACK (0x000700)			//0x001500~0x0016FF, STACKSIZE EQU 100H
+) 
+
+//OVERLAY (?PR?UartSendInfo?module_uart ! *)
+//OVERLAY (?PR?delay?main ! *)
+OVERLAY (?PR?INIT_CLK?init ! *)
+OVERLAY (?PR?T2_capture_1ms_for_TRIM?init ! *)
+

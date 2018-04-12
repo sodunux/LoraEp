@@ -1,0 +1,2370 @@
+jtag_ReadIdCode ---> OK!
+--- Identification of CPU Target ---
+    jtag_ReadRegister (1, 0, x) ---> OK!
+--- Verify CPU Target ---
+--- Loading Program Monitor ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (1, 2, 1) ---> OK!
+jtag_WriteMem (FF007B, x, 3) ---> OK!
+jtag_WriteMem (FF6E00, x, 102) ---> OK!
+jtag_WriteMem (FF6E7B, x, 307) ---> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reset Monitor ---
+    jtag_WriteRegister (0, 2, 1) ---> OK!
+    jtag_WriteRegister (5, 1, 1) ---> OK!
+    jtag_WriteRegister (0, 2, 0) ---> OK!
+--- Reading the User Context ---
+jtag_ReadRegisters (1, 1, x, 42) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_ReadRegister (1, 0, x) ---> OK!
+    jtag_ReadRegister (0, 1, x) ---> OK!
+--- Checking Bird Hardware to get Matrice of Detectors and Actuator list ---
+    jtag_ReadRegister (7, 0, x) ---> OK!
+    jtag_ReadRegister (8, 0, x) ---> OK!
+    jtag_ReadRegister (9, 0, x) ---> OK!
+    jtag_ReadRegister (A, 0, x) ---> OK!
+    jtag_ReadRegister (B, 0, x) ---> OK!
+    jtag_ReadRegister (C, 0, x) ---> OK!
+    jtag_ReadRegister (6, 4, x) ---> OK!
+--- Parsing MAP File ---
+--- -> Parsing OK ---
+    jtag_WriteRegister (6, 2, C1) ---> OK!
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (000000, x, 5) ---
+    jtag_WriteRegister (2, 3, 80) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (000002, x, 5) ---
+    jtag_WriteRegister (2, 3, 80) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, 2) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (000003, x, 5) ---
+    jtag_WriteRegister (2, 3, 80) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, 3) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (000004, x, 5) ---
+    jtag_WriteRegister (2, 3, 80) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, 4) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (000005, x, 5) ---
+    jtag_WriteRegister (2, 3, 80) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, 5) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+    jtag_ReadRegister (1, 0, x) ---> OK!
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Writing Code Memory ---
+--- Performing CPU Reset ---
+    jtag_WriteRegister (6, 2, C1) ---> OK!
+--- Reset Monitor ---
+    jtag_WriteRegister (0, 2, 1) ---> OK!
+    jtag_WriteRegister (5, 1, 1) ---> OK!
+    jtag_WriteRegister (0, 2, 0) ---> OK!
+--- Reading the User Context ---
+jtag_ReadRegisters (1, 1, x, 42) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_ReadRegister (1, 0, x) ---> OK!
+    jtag_ReadRegister (0, 1, x) ---> OK!
+    jtag_WriteRegister (6, 2, C1) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 4) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 2) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 8) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 71) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 24) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 71) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 8) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+--- Memory Read Access ---
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 176) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+--- Memory Read Access ---
+--- Memory Read Access ---
+--- Memory Read Access ---
+--- Memory Read Access ---
+--- Memory Read Access ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (FF0006, x, 5) ---
+    jtag_WriteRegister (2, 3, FF) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, 6) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (FF000A, x, 5) ---
+    jtag_WriteRegister (2, 3, FF) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, A) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (FF000B, x, 5) ---
+    jtag_WriteRegister (2, 3, FF) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, B) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+jtag_SendBirdReq()
+    jtag_WriteRegister (2, 2, 80) ---> OK!
+jtag_WaitForAck () ---
+    jtag_ReadRegister (2, 1, x) ---> OK!
+> OK!
+jtag_ReadMem (FF000E, x, 5) ---
+    jtag_WriteRegister (2, 3, FF) ---> OK!
+    jtag_WriteRegister (2, 3, 0) ---> OK!
+    jtag_WriteRegister (2, 3, E) ---> OK!
+jtag_ReadRegisters (2, 4, x, 5) ---
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+    jtag_ReadRegister (2, 4, x) ---> OK!
+> OK!
+> OK!
+jtag_ReleaseBirdReq()
+    jtag_WriteRegister (2, 2, 0) ---> OK!
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Memory Read Access ---
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+--- Memory Read Access ---
+--- Memory Read Access ---
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 4) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 2) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 8) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 71) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 24) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 71) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 8) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+--- Memory Read Access ---
+--- Memory Read Access ---
+--- Memory Read Access ---
+--- Reading Code Memory ---
+--- Go Step ---
+--- Initialization before run ---
+jtag_ReadIdCode ---> OK!
+    jtag_WriteRegister (5, 1, 1) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 2B) ---> OK!
+    jtag_ReadRegister (0, 1, x) ---> OK!
+    jtag_ReadRegister (1, 0, x) ---> OK!
+--- Reading the User Context ---
+jtag_ReadRegisters (1, 1, x, 42) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+--- Finalization after run ---    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 4) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 2) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 8) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 71) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 24) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 71) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 8) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+--- Memory Read Access ---
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 1) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+--- Memory Read Access ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Reading Code Memory ---
+--- Memory Read Access ---
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 127) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 49) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+--- Memory Read Access ---
+--- Memory Read Access ---
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 79) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 97) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+--- Memory Read Access ---
+    jtag_WriteRegister (4, 2, FF) ---> OK!
+    jtag_WriteRegister (4, 3, 6F) ---> OK!
+    jtag_WriteRegister (4, 4, 45) ---> OK!
+    jtag_WriteRegister (4, 1, C0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 127) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!
+    jtag_WriteRegister (4, 1, 0) ---> OK!
+    jtag_WriteRegister (4, 2, 0) ---> OK!
+    jtag_WriteRegister (4, 3, 0) ---> OK!
+    jtag_WriteRegister (4, 4, 0) ---> OK!
+    jtag_WriteRegisters (1, 1, x, 6) ---> OK!
+jtag_ReadRegisters (1, 1, x, 49) ---
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+    jtag_ReadRegister (1, 1, x) ---> OK!
+> OK!

@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+G:\Project\LoraEp\Code\FM375_TEST2\FM375_TEST\FM375_TEST_Pro.uvproj
+Project File Date:  07/12/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+compiling fm375_uart.c...
+compiling init.c...
+init.c(332): warning C47: 'flash_data0': unreferenced local variable
+init.c(332): warning C47: 'flash_data1': unreferenced local variable
+init.c(332): warning C47: 'flash_data2': unreferenced local variable
+init.c(332): warning C47: 'tmp_cnt': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    delay_ms?_/main
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    UartTx_0/uart
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LCD_display_delay/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LCD_all_reg_0xFF/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LcdDisp/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    set_LCD_segment_by_point_num_compbyte_loc/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    set_LCD_segment_by_loc_and_value/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LCD_all_reg_0x00/DISP
+Program Size: data=20.0 edata+hdata=1472 xdata=0 const=95 code=35693
+creating hex file from "FM375_TEST"...
+"FM375_TEST" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling fm375_uart.c...
+linking...
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    delay_ms?_/main
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    UartTx_0/uart
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LCD_display_delay/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LCD_all_reg_0xFF/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LcdDisp/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    set_LCD_segment_by_point_num_compbyte_loc/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    set_LCD_segment_by_loc_and_value/DISP
+*** WARNING L16: UNCALLED FUNCTION, IGNORED FOR OVERLAY PROCESS
+    NAME:    LCD_all_reg_0x00/DISP
+Program Size: data=20.0 edata+hdata=1472 xdata=0 const=95 code=35693
+creating hex file from "FM375_TEST"...
+"FM375_TEST" - 0 Error(s), 8 Warning(s).

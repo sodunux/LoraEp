@@ -1,0 +1,536 @@
+$NOMACRO
+$MODSRC
+$MODEL(6)
+$INTR2
+$CASE
+
+;
+; '.\main.SRC' generated from 'main.c'
+; COMPILER INVOKED BY:
+;        C:\Keil\C251\BIN\C251.EXE main.c XSMALL INTR2 BROWSE DEBUG TABS(2) SRC(.\main.SRC) 
+;
+                NAME main
+
+        EXTRN         CODE : NEAR (Set_SYSWDT)
+        EXTRN         CODE : NEAR (Uart_Proc)
+        EXTRN         CODE : NEAR (Init_UART)
+        EXTRN         CODE : NEAR (UartSendInfo)
+        EXTRN         CODE : NEAR (Init_IO_PAD)
+        EXTRN         CODE : NEAR (Init_UART_PAD)
+        EXTRN         CODE : NEAR (INIT_CLK)
+        EXTRN         CODE : NEAR (Init_SYS)
+        EXTRN         CODE : NEAR (?C?STARTUP)
+
+         ?PR?DELAY?_?MAIN  SEGMENT  CODE  
+            ?PR?MAIN?MAIN  SEGMENT  CODE  
+      ?PR?DELAY_US?_?MAIN  SEGMENT  CODE  
+       ?ED?AT_100_?1?MAIN  SEGMENT  EDATA AT 0100H
+                 ?ED?MAIN  SEGMENT  EDATA  
+                 ?HC?MAIN  SEGMENT  HCONST  
+
+        RSEG       ?ED?AT_100_?1?MAIN
+          TX_Buf:  DS  256
+
+        RSEG       ?ED?MAIN
+        Commandh:  DSB  1
+        Commandl:  DSB  1
+           Uart0:  DS  17
+   Uart_test_int:  DSB  1
+
+
+        RSEG       ?HC?MAIN
+
+FMSHINFO:         DB  055H
+        DB  0AAH
+        DB  0FFH
+        DB  000H
+        DB  003H
+        DB  007H
+        DB  005H
+
+;--- special function registers and bits:
+           MMCON  DATA  097H
+             PSW  DATA  0D0H
+           MPAGE  DATA  0A1H
+             SPH  DATA  0BEH
+          WDTRST  DATA  0A6H
+           T2CON  DATA  0C8H
+           T2MOD  DATA  0C9H
+           CCAPO  DATA  0DFH
+             IPL  DATA  0B8H
+             IPH  DATA  0B7H
+             DPL  DATA  082H
+        PWMDCMSB  DATA  0A4H
+        PWMDCLSB  DATA  0A3H
+             DPH  DATA  083H
+             TL2  DATA  0CCH
+             TL1  DATA  08BH
+          WDTCON  DATA  0A5H
+             TL0  DATA  08AH
+             AIF  DATA  0C0H
+             AIE  DATA  0E8H
+             TH2  DATA  0CDH
+             TH1  DATA  08DH
+             TH0  DATA  08CH
+             ACC  DATA  0E0H
+          P3_DIR  DATA  0AFH
+          P2_DIR  DATA  0AEH
+          P1_DIR  DATA  0ADH
+              ?B  DATA  0F0H
+          P0_DIR  DATA  0ACH
+          CLKCON  DATA  086H
+            DPXL  DATA  084H
+          CCMVAL  DATA  08FH
+            PWMC  DATA  0A2H
+        INT0FLAG  DATA  092H
+          EXTRA2  DATA  095H
+          EXTRA1  DATA  094H
+          EXTRA0  DATA  093H
+            TCON  DATA  088H
+            TMOD  DATA  089H
+          CCMCON  DATA  08EH
+            PCON  DATA  087H
+            PSW1  DATA  0D1H
+            AIPL  DATA  0F8H
+          RCAP2L  DATA  0CAH
+            CCON  DATA  0D8H
+            CMOD  DATA  0D9H
+              SP  DATA  081H
+            AIPH  DATA  0F7H
+          RCAP2H  DATA  0CBH
+         XTALCON  DATA  085H
+          CCAPM4  DATA  0DEH
+          CCAPM3  DATA  0DDH
+          CCAP4L  DATA  0EEH
+          CCAPM2  DATA  0DCH
+          CCAP3L  DATA  0EDH
+         CPUINFO  DATA  096H
+          CCAPM1  DATA  0DBH
+          CCAP2L  DATA  0ECH
+          CCAPM0  DATA  0DAH
+          CCAP1L  DATA  0EBH
+          CCAP0L  DATA  0EAH
+          CCAP4H  DATA  0FEH
+          CCAP3H  DATA  0FDH
+          CCAP2H  DATA  0FCH
+          CCAP1H  DATA  0FBH
+          CCAP0H  DATA  0FAH
+              CL  DATA  0E9H
+              IE  DATA  0A8H
+              CH  DATA  0F9H
+              P3  DATA  0B0H
+              P2  DATA  0A0H
+              P1  DATA  090H
+         NMIFLAG  DATA  091H
+              P0  DATA  080H
+               B  DATA  0F0H
+               Z  BIT   0D1H.1
+              EA  BIT   0A8H.7
+              OV  BIT   0D0H.2
+               P  BIT   0D0H.0
+              F0  BIT   0D0H.5
+             RS1  BIT   0D0H.4
+             RS0  BIT   0D0H.3
+              AC  BIT   0D0H.6
+            ACC6  BIT   0E0H.6
+            ACC5  BIT   0E0H.5
+            ACC4  BIT   0E0H.4
+            ACC3  BIT   0E0H.3
+            ACC2  BIT   0E0H.2
+            ACC1  BIT   0E0H.1
+            ACC0  BIT   0E0H.0
+             TXD  BIT   0B0H.1
+           IPLX1  BIT   0B8H.2
+             RXD  BIT   0B0H.0
+           IPLX0  BIT   0B8H.0
+           IPLT2  BIT   0B8H.5
+           IPLT1  BIT   0B8H.3
+           IPLT0  BIT   0B8H.1
+           CPRL2  BIT   0C8H.0
+           EXEN2  BIT   0C8H.3
+           AIPL6  BIT   0F8H.6
+           AIPL5  BIT   0F8H.5
+           AIPL4  BIT   0F8H.4
+           AIPL3  BIT   0F8H.3
+           AIPL2  BIT   0F8H.2
+             TR2  BIT   0C8H.2
+           AIPL1  BIT   0F8H.1
+             TR1  BIT   088H.6
+           AIPL0  BIT   0F8H.0
+             TR0  BIT   088H.4
+             IT1  BIT   088H.2
+             EX1  BIT   0A8H.2
+             IT0  BIT   088H.0
+             EX0  BIT   0A8H.0
+             TF2  BIT   0C8H.7
+             TF1  BIT   088H.7
+             ET2  BIT   0A8H.5
+             TF0  BIT   088H.5
+             ET1  BIT   0A8H.3
+             CT2  BIT   0C8H.1
+             ET0  BIT   0A8H.1
+             IE1  BIT   088H.3
+             IE0  BIT   088H.1
+             P37  BIT   0B0H.7
+             P27  BIT   0A0H.7
+             P36  BIT   0B0H.6
+            IPLS  BIT   0B8H.4
+             P17  BIT   090H.7
+             P26  BIT   0A0H.6
+             P35  BIT   0B0H.5
+             P07  BIT   080H.7
+             P16  BIT   090H.6
+             P25  BIT   0A0H.5
+             P34  BIT   0B0H.4
+             P06  BIT   080H.6
+             P15  BIT   090H.5
+             P24  BIT   0A0H.4
+             P33  BIT   0B0H.3
+             P05  BIT   080H.5
+             P14  BIT   090H.4
+             P23  BIT   0A0H.3
+             P32  BIT   0B0H.2
+             P04  BIT   080H.4
+             P13  BIT   090H.3
+             P22  BIT   0A0H.2
+             P31  BIT   0B0H.1
+             P03  BIT   080H.3
+             P12  BIT   090H.2
+             P21  BIT   0A0H.1
+             P30  BIT   0B0H.0
+             P02  BIT   080H.2
+             P11  BIT   090H.1
+             P20  BIT   0A0H.0
+             P01  BIT   080H.1
+             P10  BIT   090H.0
+             P00  BIT   080H.0
+            TCLK  BIT   0C8H.4
+            RCLK  BIT   0C8H.5
+              WR  BIT   0B0H.6
+            IPLC  BIT   0B8H.6
+            INT1  BIT   0B0H.3
+            INT0  BIT   0B0H.2
+              CY  BIT   0D0H.7
+              UD  BIT   0D0H.1
+              ES  BIT   0A8H.4
+              RD  BIT   0B0H.7
+            EXF2  BIT   0C8H.6
+              EC  BIT   0A8H.6
+            AIF6  BIT   0C0H.6
+            AIF5  BIT   0C0H.5
+            AIE6  BIT   0E8H.6
+              T1  BIT   0B0H.5
+            AIF4  BIT   0C0H.4
+            AIE5  BIT   0E8H.5
+              T0  BIT   0B0H.4
+            AIF3  BIT   0C0H.3
+            AIE4  BIT   0E8H.4
+            AIF2  BIT   0C0H.2
+            AIE3  BIT   0E8H.3
+            AIF1  BIT   0C0H.1
+            AIE2  BIT   0E8H.2
+            AIF0  BIT   0C0H.0
+            AIE1  BIT   0E8H.1
+            AIE0  BIT   0E8H.0
+            ACC7  BIT   0E0H.7
+;--- end of special function registers and bits.
+
+        PUBLIC        delay?_
+        PUBLIC        main
+        PUBLIC        delay_us?_
+        PUBLIC        TX_Buf
+        PUBLIC        Commandh
+        PUBLIC        Commandl
+        PUBLIC        Uart0
+        PUBLIC        Uart_test_int
+        PUBLIC        FMSHINFO
+
+; line 1: /************************************************************************/
+; line 2: /* 	系统主函数  									                */
+; line 3: /* 	主要功能:															*/
+; line 4: /* 				                                                */
+; line 5: /*	硬件平台：	 													  	*/
+; line 6: /*			FM375	                        	*/
+; line 7: /* 	编制:xudayong													*/
+; line 8: /* 	编制时间:2016年03月30日												*/
+; line 9: /************************************************************************/
+; line 10: 
+; line 11: #include "init.h"
+; line 12:  struct  UartRunParam_struct near Uart0;		//串行通信数据结构
+; line 13:  INT8U TX_Buf[TX_BUF_SIZE] _at_ 0x100;			//通信接收发送缓冲区 100BYTES
+; line 14:  INT8U Commandh;
+; line 15:  INT8U Commandl;	
+; line 16:  INT8U Uart_test_int;//测试UART用
+; line 17: 
+; line 18: 
+; line 19:  INT8U const FMSHINFO[] = {0x55, 0xAA, 0xFF, 0x00, 0x03, 0x07, 0x05};		//版权信息
+; line 20: 
+; line 21: //		通用延时程序
+; line 22: void delay(INT16U dlength) reentrant    //1ms
+
+        RSEG       ?PR?DELAY?_?MAIN
+        delay?_ PROC
+;---- Variable 'dlength' assigned to Register 'WR6' ----
+; line 23: {
+; line 24: 	INT16U i,j;
+; line 25: 	for (i=0;i<dlength;i++)
+        XRL      WR4,WR4
+;---- Variable 'i' assigned to Register 'WR4' ----
+        SJMP     ?C0003
+; line 26: 	{
+; line 27:  		WDT_CLR();
+?C0007:
+        MOV      A,#05AH                        ; A=R11
+        MOV      DPTR,#0C0H
+        MOVX     @DPTR,A                        ; A=R11
+; line 28: 		for (j=0;j<0x2a8;j++)
+        XRL      WR2,WR2
+;---- Variable 'j' assigned to Register 'WR2' ----
+?C0013:
+; line 29: 		{
+; line 30: 			_nop_();
+        NOP      
+; line 31: 		}
+        INC      WR2,#01H
+        CMP      WR2,#02A8H
+        JNE      ?C0013
+; line 32: 	}
+        INC      WR4,#01H
+?C0003:
+        CMP      WR4,WR6
+        JC       ?C0007
+; line 33: }
+        RET      
+        ENDP
+
+        RSEG       ?PR?DELAY_US?_?MAIN
+        delay_us?_ PROC
+; line 34: 
+; line 35: //		通用延时程序
+; line 36: void delay_us(INT16U dlength) reentrant    //1us
+;---- Variable 'dlength' assigned to Register 'WR6' ----
+; line 37: {
+; line 38: 	INT16U i;
+; line 39: 	for (i=0;i<dlength;i++)
+        XRL      WR4,WR4
+;---- Variable 'i' assigned to Register 'WR4' ----
+        SJMP     ?C0017
+; line 40: 	{
+; line 41:  		WDT_CLR();
+?C0021:
+        MOV      A,#05AH                        ; A=R11
+        MOV      DPTR,#0C0H
+        MOVX     @DPTR,A                        ; A=R11
+; line 42: 	}
+        INC      WR4,#01H
+?C0017:
+        CMP      WR4,WR6
+        JC       ?C0021
+; line 43: }
+        RET      
+        ENDP
+
+        RSEG       ?PR?MAIN?MAIN
+        main PROC
+; line 44: 
+; line 45: void main(void)
+; line 46: {
+; line 47: 	Set_SYSWDT(wdtov_time_4096S);			//设置wdt周期	
+        MOV      A,#04H                         ; A=R11
+        LCALL    Set_SYSWDT
+; line 48: 	
+; line 49: 							#pragma asm
+; line 50: 								EDATALEN2	EQU	0010H
+        EDATALEN2	EQU	0010H
+; line 51: 								EDATASTART EQU 0000H
+        EDATASTART EQU 0000H
+; line 52: 								
+; line 53: 								IF EDATALEN2 <> 0
+        IF EDATALEN2 <> 0
+; line 54: 
+; line 55: 											MOV	WR8,#EDATALEN2 - 1 //地址数据
+        MOV	WR8,#EDATALEN2 - 1  
+; line 56: 											MOV WR14,#EDATASTART
+        MOV WR14,#EDATASTART
+; line 57: 									
+; line 58: 											MOV A,#055H
+        MOV A,#055H
+; line 59: 	
+; line 60: 									EDATALOOP2:	MOV	@WR8,R11   //R9:将地址低位写入地址中
+        EDATALOOP2:	MOV	@WR8,R11    
+; line 61: 											DEC	WR8,#1
+        DEC	WR8,#1
+; line 62: 											CMP WR8,WR14
+        CMP WR8,WR14
+; line 63: 											JNE	EDATALOOP2
+        JNE	EDATALOOP2
+; line 64: 											
+; line 65: 											
+; line 66: 									MOV WR2,#5000H
+        MOV WR2,#5000H
+; line 67: 									DELAY10MS:	MOV      A,#05AH                        ; A=R11
+        DELAY10MS:	MOV      A,#05AH                        ; A=R11
+; line 68: 															MOV      DPTR,#0C0H
+        MOV      DPTR,#0C0H
+; line 69: 															MOVX     @DPTR,A                        ; A=R11    //清狗
+        MOVX     @DPTR,A                        ; A=R11     
+; line 70: 															DEC WR2,#1
+        DEC WR2,#1
+; line 71: 															JNE	DELAY10MS
+        JNE	DELAY10MS
+; line 72: 															
+; line 73: 															LJMP READRAM
+        LJMP READRAM
+; line 74: 															
+; line 75: 									READRAM:MOV	WR8,#EDATALEN2 - 1 //地址数据
+        READRAM:MOV	WR8,#EDATALEN2 - 1  
+; line 76: 											MOV WR14,#EDATASTART
+        MOV WR14,#EDATASTART
+; line 77: 									EDATALOOP1:	MOV	R5,@WR8    //读出相应地址的数据
+        EDATALOOP1:	MOV	R5,@WR8     
+; line 78: 											CMP R5,R9   //比较读出的数据
+        CMP R5,R9    
+; line 79: 											JNE ERROR_PRO  //如果不相等，进入错误处理程序
+        JNE ERROR_PRO   
+; line 80: 											DEC	WR8,#1
+        DEC	WR8,#1
+; line 81: 											CMP WR8,WR14
+        CMP WR8,WR14
+; line 82: 											JNE	EDATALOOP1
+        JNE	EDATALOOP1
+; line 83: 											
+; line 84: 											LJMP NOMAL
+        LJMP NOMAL
+; line 85: 	               
+; line 86: 											ERROR_PRO:MOV      A,#01H                        ; A=R11
+        ERROR_PRO:MOV      A,#01H                        ; A=R11
+; line 87: 												MOV      DPTR,#0100H
+        MOV      DPTR,#0100H
+; line 88: 												MOVX     @DPTR,A                        ; A=R11
+        MOVX     @DPTR,A                        ; A=R11
+; line 89: 												MOV      DPTR,#0112H
+        MOV      DPTR,#0112H
+; line 90: 												MOVX     @DPTR,A                        ; A=R11
+        MOVX     @DPTR,A                        ; A=R11
+; line 91: 												MOV      DPTR,#0122H
+        MOV      DPTR,#0122H
+; line 92: 												MOVX     @DPTR,A                         ; A=R11   //置高
+        MOVX     @DPTR,A                         ; A=R11    
+; line 93: 												MOV      A,#00H                        ; A=R11
+        MOV      A,#00H                        ; A=R11
+; line 94: 												MOV      DPTR,#0122H
+        MOV      DPTR,#0122H
+; line 95: 												MOVX     @DPTR,A                         ; A=R11  //置低
+        MOVX     @DPTR,A                         ; A=R11   
+; line 96: 												MOV      A,#01H                        ; A=R11
+        MOV      A,#01H                        ; A=R11
+; line 97: 												MOV      DPTR,#0122H
+        MOV      DPTR,#0122H
+; line 98: 												MOVX     @DPTR,A                         ; A=R11   //置高
+        MOVX     @DPTR,A                         ; A=R11    
+; line 99: 												
+; line 100: 												LJMP ENDASM
+        LJMP ENDASM
+; line 101: 												
+; line 102: 											NOMAL:MOV      A,#01H                        ; A=R11
+        NOMAL:MOV      A,#01H                        ; A=R11
+; line 103: 												MOV      DPTR,#0100H
+        MOV      DPTR,#0100H
+; line 104: 												MOVX     @DPTR,A                        ; A=R11
+        MOVX     @DPTR,A                        ; A=R11
+; line 105: 												MOV      DPTR,#0112H
+        MOV      DPTR,#0112H
+; line 106: 												MOVX     @DPTR,A                        ; A=R11   
+        MOVX     @DPTR,A                        ; A=R11   
+; line 107: 												MOV      DPTR,#0122H
+        MOV      DPTR,#0122H
+; line 108: 												MOVX     @DPTR,A                         ; A=R11  //置高
+        MOVX     @DPTR,A                         ; A=R11   
+; line 109: 												MOV      A,#00H                        ; A=R11
+        MOV      A,#00H                        ; A=R11
+; line 110: 												MOV      DPTR,#0122H
+        MOV      DPTR,#0122H
+; line 111: 												MOVX     @DPTR,A                         ; A=R11   //置低
+        MOVX     @DPTR,A                         ; A=R11    
+; line 112: 												
+; line 113: 											ENDASM: NOP
+        ENDASM: NOP
+; line 114: 								ENDIF	
+        ENDIF	
+; line 115: 								
+; line 116: 							#pragma endasm	
+; line 117: 	
+; line 118: 	
+; line 119: // 	INT16U volatile mtd,mrd;
+; line 120: //  	INT16U volatile *p,tmp;
+; line 121: // 	INT16U volatile buffer[2];
+; line 122: // 	buffer[0] = 0x55aa;
+; line 123: // 	buffer[1] = 0x1122;
+; line 124: // 	mtd = &buffer[0];
+; line 125: // 	p = &buffer[1];
+; line 126: // 	mrd  = p;
+; line 127: // 	*p = 0x3344;
+; line 128: // 	mrd = p - mtd;
+; line 129: 
+; line 130: 	
+; line 131: 	FDETIE = 0;
+        CLR      A                              ; A=R11
+        MOV      DPTR,#036AH
+        MOVX     @DPTR,A                        ; A=R11
+; line 132: 	FDETIF = 0;
+        MOV      DPTR,#036BH
+        MOVX     @DPTR,A                        ; A=R11
+; line 133: 
+; line 134: 	
+; line 135: 	INIT_CLK();
+        LCALL    INIT_CLK
+; line 136: 	Init_SYS();   //设置看门狗、中断等
+        LCALL    Init_SYS
+; line 137: 	
+; line 138:   	Init_IO_PAD();
+        LCALL    Init_IO_PAD
+; line 139: // 		PADATA ^= BIT0;
+; line 140:  		
+; line 141: 
+; line 142: // 	//***********************  clk output ***************************//		
+; line 143: // //  	IO4OUTEN |= BIT5;  //GPIO45 OUT CLK
+; line 144: // //   TESTCON |= clko_coreclk | clko_en; //remap0 | gpio_outen
+; line 145: 
+; line 146: 
+; line 147: 	Init_UART_PAD();
+        LCALL    Init_UART_PAD
+; line 148: 	Init_UART();
+        LCALL    Init_UART
+; line 149: 	
+; line 150: 
+; line 151:  	UartSendInfo(sizeof(FMSHINFO)/sizeof(*FMSHINFO),FMSHINFO);	//复位后串口发出初始信息
+        MOV      A,#07H                         ; A=R11
+        MOV      WR2,#WORD0 FMSHINFO
+        MOV      WR0,#WORD2 FMSHINFO
+        LCALL    UartSendInfo
+; line 152: 	delay(1);
+        MOV      WR6,#01H
+        LCALL    delay?_
+; line 153: 	
+; line 154: 	while(1)
+; line 155: 	{
+; line 156:   	WDT_CLR();
+?C0029:
+        MOV      A,#05AH                        ; A=R11
+        MOV      DPTR,#0C0H
+        MOVX     @DPTR,A                        ; A=R11
+; line 157: 		if((Uart0.RecvOKFLAG) == true)
+        MOV      R11,Uart0+11                   ; A=R11
+        CJNE     A,#01H,?C0029                  ; A=R11
+; line 158: 		{
+; line 159: 			Uart_Proc();			        //Uart通信处理
+        LCALL    Uart_Proc
+; line 160: 		}
+        SJMP     ?C0029
+        ENDP
+; line 161: 	}
+; line 162: 	
+; line 163: }
+
+        END
+

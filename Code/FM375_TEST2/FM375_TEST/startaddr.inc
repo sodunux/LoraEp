@@ -1,0 +1,1 @@
+#define STARTADDR 008E00h
